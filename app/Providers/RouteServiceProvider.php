@@ -17,7 +17,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    public const HOME = '/home';
+    public const HOME = '/admin/pottv/backend-portal/dashboard';
 
     /**
      * The controller namespace for the application.

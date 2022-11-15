@@ -31,6 +31,8 @@
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/style.css')}}">
     <!-- responsive css  -->
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/responsive.css')}}">
+    <x-rich-text-trix-styles />
+
 </head>
 <!-- Spinner loader Start -->
 <div class="loader">
@@ -57,6 +59,11 @@
                     <li class="nav-item {{ Route::currentRouteNamed('services') ? 'active' : '' }}">
                         <a href="{{ route('services') }}">Our Services</a>
                     </li>
+                    @if(\App\Models\Post::all()->count() > 0)
+                    <li class="nav-item {{ Route::currentRouteNamed('blog.index') || Route::currentRouteNamed('blog.show') ? 'active' : '' }}">
+                        <a href="{{ route('blog.index') }}">Blog</a>
+                    </li>
+                    @endif
                     <li class="nav-item {{ Route::currentRouteNamed('contact') ? 'active' : '' }}">
                         <a href="{{ route('contact') }}">Contact Us</a>
                     </li>
