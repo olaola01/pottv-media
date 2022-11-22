@@ -16,7 +16,7 @@
                                 <div class="post-cat">
                                 <span class="posted-in">
                                       @foreach($post->tags as $tag)
-                                        <a href="javascript:void(0)">{{ ucfirst($tag->title) }}</a>
+                                        <a href="javascript:void(0)" class="mb-1">{{ ucfirst($tag->title) }}</a>
                                     @endforeach
                                 </span>
                                 </div>
@@ -80,7 +80,7 @@
                                 <div class="post-cat">
                                 <span class="posted-in">
                                     @foreach($recent->tags as $tag)
-                                        <a href="javascript:void(0)">{{ ucfirst($tag->title) }}</a>
+                                        <a href="javascript:void(0)" class="mb-1">{{ ucfirst($tag->title) }}</a>
                                     @endforeach
                                 </span>
                                 </div>
