@@ -41,6 +41,7 @@
                             <tr>
                                 <td class="text-center">{{$post->title}}</td>
                                 <td>{!! \Illuminate\Support\Str::limit($post->content, 50) !!}</td>
+                                @if(isset($post->category->title))
                                 <td class="text-center">{{$post->category->title}}</td>
                                 @else
                                     <td class="text-center">Not available</td>
