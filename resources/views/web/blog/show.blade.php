@@ -33,7 +33,7 @@
                                     </div>
                                     <a href="{{ route('blog.show', $post->slug) }}" class="entry-title">{{ ucfirst($post->title) }}</a>
                                 </div>
-                                <p class="entry-summary">{!! \Illuminate\Support\Str::limit(strip_tags($post->content), 80) !!}</p>
+                                <p class="entry-summary">{!! $post->content !!}</p>
                             </div>
                         </div>
                     </div>
@@ -97,7 +97,7 @@
                                     </div>
                                     <a href="{{ route('blog.show', $recent->slug) }}" class="entry-title">{{ ucfirst($recent->title) }}</a>
                                 </div>
-                                <p class="entry-summary">{!! $recent->content !!}</p>
+                                <p class="entry-summary">{!! \Illuminate\Support\Str::limit(strip_tags($recent->content), 80) !!}</p>
                             </div>
                         </div>
                     </div>
