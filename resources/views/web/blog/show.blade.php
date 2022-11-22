@@ -20,7 +20,7 @@
                                     @endforeach
                                 </span>
                                 </div>
-                                <a href="blog-single.html">
+                                <a href="{{ route('blog.show', $post->slug) }}">
                                     <img class="lazy" data-src="{{asset('public/posts/'.$post->post_image)}}" src="{{asset('public/posts/'.$post->post_image)}}" alt="blog-grid">
                                 </a>
                             </div>
@@ -84,7 +84,7 @@
                                     @endforeach
                                 </span>
                                 </div>
-                                <a href="blog-single.html">
+                                <a href="{{ route('blog.show', $post->slug) }}">
                                     <img class="lazy" data-src="{{asset('public/posts/'.$recent->post_image)}}" src="{{asset('public/posts/'.$recent->post_image)}}" alt="blog-grid">
                                 </a>
                             </div>
