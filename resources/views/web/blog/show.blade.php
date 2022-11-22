@@ -97,7 +97,7 @@
                                     </div>
                                     <a href="{{ route('blog.show', $recent->slug) }}" class="entry-title">{{ ucfirst($recent->title) }}</a>
                                 </div>
-                                <p class="entry-summary">{!! \Illuminate\Support\Str::limit(strip_tags($recent->content), 80) !!}</p>
+                                <p class="entry-summary">{!! $recent->content !!}</p>
                             </div>
                         </div>
                     </div>

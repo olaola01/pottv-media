@@ -27,11 +27,11 @@
                         <div class="post-inner">
                             <div class="entry-media">
                                 <div class="post-cat">
-                                <span class="posted-in">
-                                    @foreach($post->tags as $tag)
-                                        <a href="javascript:void(0)">{{ ucfirst($tag->title) }}</a>
-                                    @endforeach
-                                </span>
+{{--                                <span class="posted-in">--}}
+{{--                                    @foreach($post->tags as $tag)--}}
+{{--                                        <a href="javascript:void(0)">{{ ucfirst($tag->title) }}</a>--}}
+{{--                                    @endforeach--}}
+{{--                                </span>--}}
                                 </div>
                                 <a href="{{ route('blog.show', $post->slug) }}">
                                     <img class="lazy" data-src="{{asset('public/posts/'.$post->post_image)}}" src="{{asset('public/posts/'.$post->post_image)}}" alt="blog-grid">
