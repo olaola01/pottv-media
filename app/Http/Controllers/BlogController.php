@@ -21,7 +21,7 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $posts = Post::paginate(1);
+        $posts = Post::paginate(10);
         return view('web.blog.index')->with('posts', $posts);
     }
 
